@@ -1,0 +1,6 @@
+    CLR C
+    MOV A,#DATA2
+    SUBB A,#DATA2
+    MOV DPTR,#4500
+    MOVX @DPTR, A
+H: SJMP H

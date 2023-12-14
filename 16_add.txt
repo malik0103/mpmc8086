@@ -1,0 +1,10 @@
+    CLR C
+    MOV A, #DATAL1
+    ADDC A, #DATAL2
+    MOV DPTR, #4150
+    MOV @DPTR, A
+    INC DPTR
+    MOV A,#DATAM1
+    ADDC A,#DATAM2
+    MOVX @DPTR,A
+HLT: SJMP HLT

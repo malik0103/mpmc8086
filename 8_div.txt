@@ -1,0 +1,9 @@
+    MOV A,#DATA1
+    MOV B, #DATA2
+    DIV AB
+    MOV DPTR, #3500
+    MOV @DPTR, A
+    INC DPTR
+    MOV A,B
+    MOV @DPTR,A
+H: SJMP H

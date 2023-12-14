@@ -1,0 +1,12 @@
+START:  XOR BL,BL
+        XOR CH, CH
+        MOV SI, 3000
+        MOV CL, [2500]
+        MOV AL, [2000]
+NEXT:   CMP AL, [SI]
+        JNZ LABEL1
+        INC BL
+LABEL1: INC SI
+        LOOP NEXT
+        MOV [3500], BL
+        HLT

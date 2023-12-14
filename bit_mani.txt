@@ -1,0 +1,14 @@
+    MOV A,#DATA1
+    ORL A,#DATA2
+    MOV DPTR, #4500
+    MOV @DPTR, A
+H:  SJMP H
+
+
+    MOV A,#DATA1
+    ANL A,#DATA2
+    MOV DPTR, #4500
+    MOV @DPTR, A
+H:  SJMP H
+
+

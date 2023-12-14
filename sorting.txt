@@ -1,0 +1,15 @@
+START:  XOR CH,CH
+        MOV DL, [2000]
+        DEC DL
+AGAIN:  MOV CL,DL
+        MOV SI, 3000
+NEXT:   MOV AL,[SI]
+        INC SI
+        COMP AL, [SI]
+        JB SKIP             ;JNB FOR DESC  ; JB FOR ASC
+        XCHG AL,[SI]
+        MOV [SI-01], AL
+SKIP:   LOOP NEXT
+        DEC DL
+        JNZ AGAIN
+        HLT
